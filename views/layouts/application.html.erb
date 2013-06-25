@@ -1,3 +1,10 @@
+<%
+  def link_to(name,url)
+    return "<a href='#{url}'>#{name}</a>"
+  end
+%>
+
+
 <html>
   <body>
     <h1>You're using a layout</h1>
@@ -5,6 +12,9 @@
       <h3> I'm a header</h3>
       <p>Put things in the header</p>
       <a href='me.html'>Me</a>
+      <%= link_to('Google it!','http://google.com')%>
+      <%= link_to('Facebook it!','http://facebook.com')%>
+      <%= link_to('Tweet it!','http://twitter.com')%>
 
     </p>
     <hr />
