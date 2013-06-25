@@ -7,7 +7,9 @@
 
 <html>
   <body>
+    
     <h1>You're using a layout</h1>
+    <p><%= @request.query.inspect %><p>
     <p>
       <h3> I'm a header</h3>
       <p>Put things in the header</p>
@@ -17,6 +19,10 @@
       <%= link_to('Tweet it!','http://twitter.com')%>
 
     </p>
+    <form method='post' action="<%= @request.path %>">
+      First name: <input type="password" name="password" placeholder='password'/><br />
+      <input type="submit" value="Submit" />
+    </form>
     <hr />
     <div>
       <%= yield %>
